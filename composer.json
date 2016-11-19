@@ -1,0 +1,18 @@
+{
+    "name": "okashoi/laravel5-conoha-object-handler",
+    "description": "An object handler for the Conoha Object Storage on Laravel 5.",
+    "authors": [
+        {
+            "name": "Okada Shohei",
+            "email": "okashoicircus0@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.2",
+        "nesbot/carbon": "^1.21",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "laravel/framework": "^5.2"
+    }
+}
