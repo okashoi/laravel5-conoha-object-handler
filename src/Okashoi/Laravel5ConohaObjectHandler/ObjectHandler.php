@@ -7,9 +7,10 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
 
 /**
- * Conoha Object Handler with REST API
- *
+ * Class ObjectHandler
  * @package Okashoi\Laravel5ConohaObjectHandler
+ *
+ * Conoha Object Handler with REST API
  */
 class ObjectHandler
 {
