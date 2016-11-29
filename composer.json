@@ -13,5 +13,10 @@
     },
     "require-dev": {
         "laravel/framework": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Okashoi\\Laravel5ConohaObjectHandler\\": "src/Okashoi/Laravel5ConohaObjectHandler"
+        }
     }
 }
