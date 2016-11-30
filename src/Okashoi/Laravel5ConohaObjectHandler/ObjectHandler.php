@@ -42,7 +42,7 @@ class ObjectHandler
      */
     public function __construct($tokenCacheKey = null)
     {
-        $this->_client = new Client(['base_uri' => config('conoha.endpoint')]);
+        $this->_client = new Client(['base_uri' => config('conoha.base_uri')]);
         $this->_tokenCacheKey = $tokenCacheKey;
         $this->_setToken();
     }
@@ -77,7 +77,7 @@ class ObjectHandler
         ];
 
         $response = $this->_client->post(
-            config('conoha.auth_url'),
+            config('conoha.auth_endpoint'),
             [
                 'json' => $requestBody,
             ]
@@ -87,7 +87,7 @@ class ObjectHandler
 
         if (isset($this->_tokenCacheKey)) {
             // cache the token
-            Cache::put('conoha_token', $responseBody->access->token, 60 * 24);
+            Cache::put($this->_tokenCacheKey, $responseBody->access->token, 60 * 24);
         }
 
         // set the token to properties
