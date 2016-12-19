@@ -1,5 +1,7 @@
 # Laravel 5 Conoha Object Handler
 
+[![CircleCI](https://circleci.com/gh/okashoi/laravel5-conoha-object-handler/tree/master.svg?style=svg)](https://circleci.com/gh/okashoi/laravel5-conoha-object-handler/tree/master)
+
 Laravel 5 Package to use [Conoha](https://www.conoha.jp/en/) Object Storage.
 
 ## Installation
