@@ -39,10 +39,11 @@ class ObjectHandler
      * constructor
      *
      * @param string|null $tokenCacheKey This is set to $_tokenCacheKey property.
+     * @param \GuzzleHttp\Client|null $client
      */
-    public function __construct($tokenCacheKey = null)
+    public function __construct($tokenCacheKey = null, $client = null)
     {
-        $this->_client = new Client(['base_uri' => config('conoha.base_uri')]);
+        $this->_client = is_null($client) ? new Client(['base_uri' => config('conoha.base_uri')]) : $client;
         $this->_tokenCacheKey = $tokenCacheKey;
         $this->_setToken();
     }
